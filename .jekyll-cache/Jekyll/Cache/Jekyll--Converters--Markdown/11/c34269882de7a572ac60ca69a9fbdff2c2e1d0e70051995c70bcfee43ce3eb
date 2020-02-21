@@ -1,0 +1,2 @@
+I"�<p>昨天看到计量里好多假设检验都在无休止地使用和改进 <script type="math/tex">t</script> 分布。以至于看到 $t$ 统计量最初的形式都心生困惑，为什么 <script type="math/tex">\sigma</script> 未知时，构造的 <script type="math/tex">t</script> 统计量是服从自由度为 <script type="math/tex">n-1</script> 的 <script type="math/tex">t</script> 分布的。</p>
+:ET

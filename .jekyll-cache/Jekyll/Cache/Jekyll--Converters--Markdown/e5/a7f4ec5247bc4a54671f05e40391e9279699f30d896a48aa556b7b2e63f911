@@ -1,0 +1,125 @@
+I"�!<h2 id="1标准优化问题">1.标准优化问题</h2>
+
+<p>凸优化只是众多优化问题中的一种。</p>
+
+<!--break-->
+
+<p>只不过在原始问题是凸优化问题时，优化时具有诸多优良性质。</p>
+
+<p>在定义凸优化问题之前，先定义“标准优化问题”。
+<script type="math/tex">% <![CDATA[
+\begin{aligned}
+&min\ f(x)\\
+&s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m\\
+&\quad \quad h_i=0\quad \quad \quad \ i=1,...,p\\
+\end{aligned} %]]></script>
+其中，<script type="math/tex">x\in R^n</script>为优化问题的优化变量。</p>
+
+<h2 id="2凸优化问题">2.凸优化问题</h2>
+
+<p><script type="math/tex">f(x),g(x)</script>均为凸函数，<script type="math/tex">h(x)</script>为仿射函数（即最高次数为1的多项式函数）的优化问题为凸优化问题。</p>
+
+<p>凸优化问题有很多优良性质，例如，若<script type="math/tex">\exists\ (\tilde{x},\tilde{\lambda},\tilde{\mu})</script>满足KKT条件 <script type="math/tex">\Leftrightarrow</script> <script type="math/tex">(\tilde{x},\tilde{\lambda},\tilde{\mu})</script>均为最优解，且满足强对偶性。（其中，<script type="math/tex">\tilde{x}</script>为原始问题的一个可行解，<script type="math/tex">(\tilde{\lambda}, \tilde{\mu})</script>为对偶问题的一组可行解）</p>
+
+<p>但如果原始问题不是凸优化问题，则强对偶性成立时，原始问题和对偶问题的最优解<script type="math/tex">(x^*,\lambda^*,\mu^*)</script>一定满足KKT条件，但反之，满足KKT条件的解不一定是具有强对偶性的最优解。</p>
+
+<p>注：“最优准则定理”：若<script type="math/tex">\tilde{x}</script>为原始问题的一个可行解，<script type="math/tex">(\tilde{\lambda}, \tilde{\mu} )</script>为对偶问题的一组可行解，且满足强对偶性，那么这两个解均是对应问题的最优解（不要求原始问题为凸优化问题）。即，<strong>满足强对偶性的可行解一定是对应问题的最优解。</strong>换句话说，最优解不一定具有强对偶性，但满足强对偶性一定是最优解。</p>
+
+<h2 id="3原始问题">3.原始问题</h2>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&\mathop{min}_{x \in R^n}\ f(x)\\
+&s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m \quad (inequality\ constraints)\\
+&\quad \quad h_i=0\quad \quad \quad \ i=1,...,p \quad (equality\ constraints)\\
+\end{aligned} %]]></script>
+
+<p>引入拉格朗日函数（Lagrange function）：</p>
+
+<script type="math/tex; mode=display">L(x,\lambda,v)=f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x)</script>
+
+<p>其定义域为<script type="math/tex">D×R^m\times R^p</script>，<script type="math/tex">\lambda_i</script>与<script type="math/tex">\mu_i</script>均为拉格朗日乘子，且要求必须有<script type="math/tex">\mu_i\geqslant</script>0。</p>
+
+<p>再定义一个函数：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+\theta_p(x) &= \displaystyle \max_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)\\
+&=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}(f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x))
+\end{aligned} %]]></script>
+
+<p>即，<script type="math/tex">\theta_p(x)</script>表示原始问题拉格朗日函数的最大值。</p>
+
+<p>可证：原始问题的最优值等于最小化<script type="math/tex">\theta _p(x)</script>。</p>
+
+<p>简要证明：</p>
+
+<p>在<script type="math/tex">x</script>满足约束条件的情况下，即<script type="math/tex">g_i(x)\leqslant 0</script>且<script type="math/tex">h_i(x)=0</script>，那么要最大化<script type="math/tex">L(x,\lambda,\mu)</script>，应取<script type="math/tex">\mu_i=0</script>，且无论<script type="math/tex">\lambda _i</script>取何值，第三项均为0，因而，<script type="math/tex">\theta_ p(x)=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}(f(x))</script>，也即<script type="math/tex">\theta_ p(x)=f(x)</script>，因为这里参数是<script type="math/tex">(\lambda,\mu)</script>，<script type="math/tex">x</script>是给定的外生变量。</p>
+
+<p>那么，若用<script type="math/tex">p^*</script>表示原始问题的最优值：</p>
+
+<script type="math/tex; mode=display">p^*=\mathop{min}_{x \in R^n}f(x)=\mathop{min}_{x \in R^n}\theta _p(x)=\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)</script>
+
+<p>至此，我们将原始优化问题转化为:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)\\
+&s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m\\
+&\quad\quad h_i=0\quad \quad \quad \ i=1,...,p\\
+\end{aligned} %]]></script>
+
+<h2 id="4对偶问题">4.对偶问题</h2>
+
+<p>类比原始问题中定义的<script type="math/tex">\theta_p(x) = \mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)</script>，对偶问题中我们定义<script type="math/tex">\theta_d(x) = \mathop{min}_{x \in R^n}L(x,\lambda,\mu)</script>。</p>
+
+<p>则对偶问题定义为：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)\\
+&s.t.\quad\mu_i \geqslant0
+\end{aligned} %]]></script>
+
+<p>一般用<script type="math/tex">d^*</script>表示对偶问题的最优值：</p>
+
+<script type="math/tex; mode=display">p^*=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\theta _d(x)=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)</script>
+
+<p>对偶问题的性质（普遍存在的弱对偶性）：对偶问题的最优值<script type="math/tex">d^*</script> <script type="math/tex">\leqslant</script>原始问题的最优值<script type="math/tex">p^*</script></p>
+
+<p>即：<script type="math/tex">\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)\leqslant\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)</script></p>
+
+<p>Duality gap: <script type="math/tex">p^*-d^*</script></p>
+
+<p>根据以上对偶概念，定义拉格朗日对偶函数：</p>
+
+<script type="math/tex; mode=display">g(\lambda,\mu)=\mathop{inf}_{x\in D}L(x,\lambda,\mu)=\mathop{inf}_{x\in D}(f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x))</script>
+
+<p>其中$inf$表示下确界（infimum），即拉格朗日对偶函数就是拉格朗日函数的下确界。</p>
+
+<p>注：如果非空数集A有上界，则它的最小上界称为上确界，记为<script type="math/tex">supA</script>；同理，如果非空数集A有下界，则它的最大下界称为下确界，记为<script type="math/tex">infA</script>。例如，集合<script type="math/tex">A=(0,1)</script>，则其上确界为1,下确界为0。</p>
+
+<p>性质：如果拉格朗日函数关于<script type="math/tex">x</script>无下界，则对偶函数取值为<script type="math/tex">-\infty</script>。因为对偶函数是一族关于<script type="math/tex">(\lambda,\mu)</script>的仿射函数的逐点下确界，所以即使原问题不是凸的，对偶函数也是<strong>凹函数</strong>。</p>
+
+<h2 id="5slater定理和强对偶性">5.Slater定理和强对偶性</h2>
+
+<p>通常Slater定理被叙述为“若凸优化问题存在严格可行解，则优化问题具有强对偶性。”</p>
+
+<p>“严格可行解”：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+\exists x \in D \quad &g_i(x)<0 \quad i=1,...,m\\
+&Ax=b
+\end{aligned} %]]></script>
+
+<p>“强对偶性”：若<script type="math/tex">p^*=d^*</script>，则称原始问题和对偶问题之间具有强对偶性。</p>
+
+<p>则，（不一定必须是凸优化问题）满足强对偶性的最优解一定满足KKT条件。（necessary condition）</p>
+
+<h2 id="6逻辑梳理总结">6.逻辑梳理（总结）</h2>
+
+<p>在标准优化问题下，若<script type="math/tex">(\tilde{x},\tilde{\lambda},\tilde{\mu})</script>一组解，满足强对偶性，那它们一定是对应的原始问题和对偶问题的最优解，且这组解满足KKT条件。此时，已知满足KKT条件的解，不可反推，即满足KKT条件的解不一定是最优解（因为满足KKT条件的可能有多组解），即使是最优解（一定满足弱对偶性）也不一定满足强对偶性。</p>
+
+<p>在凸优化问题下，若<script type="math/tex">(\tilde{x},\tilde{\lambda},\tilde{\mu})</script>满足Slater定理，即是一组严格可行解，那么它们满足强对偶性，也就进而满足KKT条件。此时，若已知满足KKT条件的解，可以反推。</p>
+:ET

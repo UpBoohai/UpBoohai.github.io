@@ -1,0 +1,56 @@
+I"�<p>昨天看到计量里好多假设检验都在无休止地使用和改进 <script type="math/tex">t</script> 分布。以至于看到 $t$ 统计量最初的形式都心生困惑，为什么 <script type="math/tex">\sigma</script> 未知时，构造的 <script type="math/tex">t</script> 统计量是服从自由度为 <script type="math/tex">n-1</script> 的 <script type="math/tex">t</script> 分布的。</p>
+
+<!--break-->
+
+<p>查阅资料，按图索骥之后，记录如下：</p>
+
+<p>总体 <script type="math/tex">\sigma</script> 标准差未知，由 <script type="math/tex">s</script> 样本标准差 构建的 <script type="math/tex">t</script> 统计量为 <script type="math/tex">t=\frac{\bar{x}-\mu} {s/ \sqrt{n}}</script>， 证明 <script type="math/tex">\frac{\bar{x}-\mu}{s/ \sqrt{n}} \sim t(n-1)</script> 。</p>
+
+<h2 id="1">1</h2>
+
+<p>已知 <script type="math/tex">\bar{x} \sim {N(\mu,\frac{\sigma^2}{n})}</script></p>
+
+<p>所以<script type="math/tex">{\frac{\bar{x}-\mu} {\sigma/n}} \sim N(0,1)</script></p>
+
+<h2 id="2">2</h2>
+
+<p>证明 <script type="math/tex">{\frac{(n-1)s^2}{\sigma^2}}\sim {\chi^2(n-1)}</script></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+{\frac{(n-1)s^2}{\sigma^2}}=&{\frac{\sum_1^n(x_i-\bar{x})^2}{\sigma^2}}\\
+=&{\frac{\sum_1^nx_i^2-n\bar{x}^2}{\sigma^2}}\\
+=&{\frac{\sum_1^n(x_i-\mu+\mu)^2-n(\bar{x}-\mu+\mu)^2}{\sigma^2}}\\
+=&{\frac{\sum_1^n(x_i-\mu)^2+2\mu\sum_0^n(x_i-\mu)+n\mu^2}{\sigma^2}}-{\frac{n(\bar{x}-\mu)^2+n2\mu(\bar{x}-\mu)+n\mu^2}{\sigma^2}}\\
+=&{\frac{\sum_1^n(x_i-\mu)^2+2\mu(n\bar{x}-n\mu)+n\mu^2}{\sigma^2}}-{\frac{n(\bar{x}-\mu)^2+n2\mu(\bar{x}-\mu)+n\mu^2}{\sigma^2}}\\
+=&{\frac{\sum_1^n(x_i-\mu)^2}{\sigma^2}}-{\frac{(\bar{x}-\mu)^2}{\sigma^2/n}}
+\end{split}
+\end{equation} %]]></script>
+
+<p>则 <script type="math/tex">{\left({\frac{\sum_1^n(x_i-\mu)^2}{\sigma^2}}-{\frac{(\bar{x}-\mu)^2} {\sigma^2/n}}\right)}\sim \chi^2(n-1)</script></p>
+
+<h2 id="3">3</h2>
+
+<p>根据 <script type="math/tex">t</script> 分布的定义得：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+t=&{\frac{\frac{\bar{x}-\mu}{\sigma/n}}{\sqrt{(n-1)s^2\over{\sigma^2}/(n-1)}}}\\
+=& \frac{\bar{x}-\mu}{s/ \sqrt{n}}
+\end{split}
+\end{equation} %]]></script>
+
+<p>因而 <script type="math/tex">{\frac{\bar{x}-\mu}{s/ \sqrt{n}}}\sim{t(n-1)}</script> 。</p>
+
+<p><strong>注：</strong></p>
+
+<ol>
+  <li>现实中总体 <script type="math/tex">\sigma</script>  一般是未知的，在已知 <script type="math/tex">x\sim N(\mu,\sigma^2)</script> 的情况下，可直接构造上述 <script type="math/tex">t</script> 统计量进行 <script type="math/tex">t</script> 检验。</li>
+  <li>在样本足够大的时候，在 <script type="math/tex">5\%</script> 的显著性水平下， 直接用  <script type="math/tex">t</script> 统计量 与 <script type="math/tex">1.96</script> 相比即可。在 <script type="math/tex">1\%</script> 的显著性水平下， 直接用  <script type="math/tex">t</script> 统计量 与 <script type="math/tex">2.58</script> 相比。</li>
+  <li>样本标准误 <script type="math/tex">s.e.(standard\ error) = s/\sqrt n</script> ，区别于样本标准差 <script type="math/tex">s.d.(standard\ deviation)=s</script> 。</li>
+  <li>用 R 语言进行移动平均自回归时，输出结果中不显示回归系数的 <script type="math/tex">p-value</script> ， 但会同时给出系数估计值和 <script type="math/tex">s.e.(standard\ error)</script> .由于我们一般假设检验的<script type="math/tex">H_0 : \varphi=0</script> ，故 <script type="math/tex">t</script> 统计量中的 <script type="math/tex">\mu=0</script> ，<script type="math/tex">t ={ \frac{\hat{\varphi}}{s.e.}}</script></li>
+</ol>
+
+:ET

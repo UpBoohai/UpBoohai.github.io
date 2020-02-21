@@ -1,0 +1,47 @@
+---
+layout: default
+title: 关于我
+page-title: 关于我
+home-title: 一脸无辜不代表你懵懂
+description:
+---
+
+{% include header.html %}
+{% include boot.html %}
+<main>
+    {% include title.html %}
+    <ul class="ex-list">
+        <li class="fadeInUp animated">
+        {% if site.author %}
+          <div class="portraits"><img src="{{ site.portraits }}" alt=""></div>
+          <span id="yourname">{{ site.name }}</span>
+          {% if site.about %}
+            <div class="zh post-container">
+
+                <p>Hey 我是<strong>Clazy</strong> 直得懒癌 弯得疯癫</p>
+  
+                <p>羁绊太久 寻一处静谧 </p>
+
+            </div>
+          {% endif %}
+        {% endif %}
+        {% if site.SNS %}
+          {% for sns-icon in site.SNS-icon %}
+            <a href="{{ sns-icon[1] }}" title="{{ sns-icon[0] }}">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-{{ sns-icon[0] }}"></use>
+              </svg>
+            </a>
+          {% endfor%}
+        {% endif %}
+      </li>
+      <li class="fadeInUp animated">
+      {% if site.tags.size>0 %}
+          {% for tag in site.tags %}
+          <a href="tags.html#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
+          {% endfor %}
+      {% endif %}
+      </li>
+    </ul>
+</main>
+{% include footer.html %}

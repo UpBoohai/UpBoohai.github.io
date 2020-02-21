@@ -1,0 +1,2 @@
+I"s<p>“喂”给Sigmoid函数的<script type="math/tex">y</script>的表达式不同，超平面的形状也就不同（<script type="math/tex">y</script>的表达式就是超平面的表达式）。所以，实际上Logistic回归可以拟合“非线性”的超平面（<script type="math/tex">y</script>的表达式为非线性函数）来解决二分类问题。</p>
+:ET

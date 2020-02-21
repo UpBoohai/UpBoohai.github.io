@@ -1,0 +1,147 @@
+I"�<p>“喂”给Sigmoid函数的<script type="math/tex">y</script>的表达式不同，超平面的形状也就不同（<script type="math/tex">y</script>的表达式就是超平面的表达式）。所以，实际上Logistic回归可以拟合“非线性”的超平面（<script type="math/tex">y</script>的表达式为非线性函数）来解决二分类问题。</p>
+
+<!--break-->
+
+<p>这里，以“线性”超平面为例，来介绍简单Logistic回归如何解决二分类问题。</p>
+
+<p>Logistic回归解决二分类问题，针对两种数据结构实际上有两种截然不同的优化思路。习惯上，我们把这两种数据结构划分为“分组数据”和“未分组数据”。在机器学习中，一般遇到的数据集都是所谓的“未分组数据”；而在统计分析中，很多教材也十分强调“分组数据”。下文中会分别介绍和解释两种不同的优化思路，但是只强调在实际中应用比较多的“未分组数据”。</p>
+
+<h2 id="分组数据">分组数据</h2>
+
+<p>购买房屋的顾客记为1,没有购买的记为0,并按照年收入和受教育年限对顾客进行分组，形成下面的表格。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">年收入（万元）<script type="math/tex">x_1</script></th>
+      <th style="text-align: center">受教育年限（年）<script type="math/tex">x_2</script></th>
+      <th style="text-align: center">签订意向书人数<script type="math/tex">n</script></th>
+      <th style="text-align: center">实际购房人数<script type="math/tex">m</script></th>
+      <th style="text-align: center">实际购房比例<script type="math/tex">p=\frac{m} {n}</script></th>
+      <th style="text-align: center">逻辑变换<script type="math/tex">p'=ln(\frac{p} {1-p})</script></th>
+      <th style="text-align: center">权重<script type="math/tex">w=np(1-p)</script></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1.5</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">25</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">0.32</td>
+      <td style="text-align: center">-0.75</td>
+      <td style="text-align: center">5.44</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2.5</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">32</td>
+      <td style="text-align: center">13</td>
+      <td style="text-align: center">0.41</td>
+      <td style="text-align: center">-0.38</td>
+      <td style="text-align: center">7.72</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3.5</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">58</td>
+      <td style="text-align: center">26</td>
+      <td style="text-align: center">0.45</td>
+      <td style="text-align: center">-0.21</td>
+      <td style="text-align: center">14.35</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>对于这种分组数据，首先计算“1”所占的比重，即<script type="math/tex">p=\frac{m} {n}=\frac{e^{y}} {1+e^{y}}=\frac{e^{\beta_0+\beta_1 x_1\beta_2 x_2}} {1+e^{\beta_0+\beta_1 x_1+\beta_2 x_2}}</script></p>
+
+<p>这里<script type="math/tex">y=\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon</script>为一个线性函数，也就是一个线性超平面。</p>
+
+<p>再对<script type="math/tex">p</script>进行“逻辑变换”：<script type="math/tex">p'=ln(\frac{p} {1-p})=\beta_0+\beta_1 x_1+\beta_2 x_2=y</script></p>
+
+<p>这样已知<script type="math/tex">y,x_1,x_2</script>可以对上式进行WLS（加权最小二乘）回归，拟合出最优参数<script type="math/tex">\beta_0,\beta_1,\beta_2</script>。</p>
+
+<p>之所以进行WLS回归而不进行OLS（普通最小二乘）回归，是因为二值变量做因变量回归的残差具有异方差性，当$n$足够大时，<script type="math/tex">\sigma(\varepsilon)\approx\frac{1} {np(1-p)}</script>。所以要消除异方差，有<script type="math/tex">y'=wy=w(\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon)</script>，再进行OLS估计。</p>
+
+<p>进行OLS估计的优化函数为损失函数<script type="math/tex">MSE=\frac{\Sigma_{i=1}^N(y'-\hat{y'})^2} {N}</script>，机器学习中可用梯度下降法来优化参数。</p>
+
+<p>得到最优参数之后可以计算出<script type="math/tex">\hat{y'}</script>进而计算出<script type="math/tex">\hat{p}=\frac{e^\hat{y}} {1+e^\hat{y}}</script>来预测在自变量<script type="math/tex">x_1,x_2</script>的条件下，<script type="math/tex">y=1</script>所占的比重（实际购房比例），或者解释为，在自变量<script type="math/tex">x_1,x_2</script>的条件下，<script type="math/tex">y=1</script>的平均值。</p>
+
+<h2 id="未分组数据重要">未分组数据（重要）</h2>
+
+<p>购买房屋的顾客记为1,没有购买的记为0。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">性别<script type="math/tex">x_1</script></th>
+      <th style="text-align: center">年龄（岁）<script type="math/tex">x_2</script></th>
+      <th style="text-align: center">y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">21</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">23</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这里<script type="math/tex">y=\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon</script>仍取为一个线性函数。</p>
+
+<p><script type="math/tex">p=\frac{e^{y}} {1+e^{y}}</script>为<script type="math/tex">y=1</script>的概率，则<script type="math/tex">y=0</script>的概率为<script type="math/tex">1-p</script>。</p>
+
+<p>那么，一个样本的<script type="math/tex">y</script>的概率函数合写为：<script type="math/tex">P=p^y(1-p)^{1-y} \quad y=0,1</script></p>
+
+<p>为了避免处理异方差，我们通常用极大似然估计来优化参数。</p>
+
+<p>极大似然函数为：<script type="math/tex">L=\prod_{i=1}^NP_i=p_i^{y_i}(1-p_i)^{1-y_i}</script></p>
+
+<p>对似然函数取对数，得</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+lnL&=\Sigma_{i=1}^N[y_ilnp_i+(1-y_i)ln(1-p_i))]\\
+&=\Sigma_{i=1}^N[y_iln\frac{p_i} {1-p_i}+ln(1-p_i)]
+\end{aligned} %]]></script>
+
+<p>因为<script type="math/tex">p_i=\frac{e^{y_i}}{1+e^{y_i}}</script>，代入上式可得：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+lnL&=\Sigma_{i=1}^N[y_iln\frac{p_i} {1-p_i}+ln(1-p_i)]\\
+&=\Sigma_{i=1}^N[y_i\times y_i+ln(1+e^{y_i})]\\
+&=\Sigma_{i=1}^N[y_i\times (\beta_0+\beta_1 x_{1i}+\beta_2 x_{2i}+\varepsilon)+ln(1+e^{\beta_0+\beta_1 x_{1i}+\beta_2 x_{2i}+\varepsilon})]
+\end{aligned} %]]></script>
+
+<p>综上的对数似然函数就是我们的优化目标函数，这里要最大化对数似然函数，因而用梯度上升算法进行优化。</p>
+
+<p>机器学习中，对数似然函数梯度的计算：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left(
+\begin{aligned}
+\frac{\partial lnL} {\partial \beta_0}&=\Sigma_{i=1}^N(y_i\times1-\frac{e^{y_i}\times 1} {1+e^{y_i}})=\Sigma_{i=1}^N[1 \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\frac{\partial lnL} {\partial \beta_1}&=\Sigma_{i=1}^N(y_i\times x_{1i}-\frac{e^{y_i}\times x_{1i}} {1+e^{y_i}})=\Sigma_{i=1}^N[x_{1i} \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\frac{\partial lnL} {\partial \beta_2}&=\Sigma_{i=1}^N(y_i\times x_{2i}-\frac{e^{y_i} \times x_{2i}} {1+e^{y_i}})=\Sigma_{i=1}^N[x_{2i} \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\end{aligned}
+\right) %]]></script>
+
+<p>根据上式推导，<script type="math/tex">\beta_k^{(n)}=\beta_k^{(n-1)}+ \alpha \nabla_{\beta_k}</script></p>
+
+<h2 id="实例及代码实现">实例及代码实现</h2>
+
+<p>针对未分组数据，下面给出实例和Python代码(略)</p>
+
+:ET

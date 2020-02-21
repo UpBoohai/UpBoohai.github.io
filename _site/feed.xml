@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-21T10:02:33+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Clazy</title><subtitle>Cozy connor of Clazy</subtitle><author><name>true</name></author><entry><title type="html">小小的火锅食谱</title><link href="http://localhost:4000/2020/02/15/%E5%B0%8F%E5%B0%8F%E7%9A%84%E7%81%AB%E9%94%85%E9%A3%9F%E8%B0%B1.html" rel="alternate" type="text/html" title="小小的火锅食谱" /><published>2020-02-15T00:00:00+08:00</published><updated>2020-02-15T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/15/%E5%B0%8F%E5%B0%8F%E7%9A%84%E7%81%AB%E9%94%85%E9%A3%9F%E8%B0%B1</id><content type="html" xml:base="http://localhost:4000/2020/02/15/%E5%B0%8F%E5%B0%8F%E7%9A%84%E7%81%AB%E9%94%85%E9%A3%9F%E8%B0%B1.html">&lt;p&gt;小小的火锅食谱&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;蔬菜&quot;&gt;蔬菜&lt;/h2&gt;
+
+&lt;p&gt;生菜&lt;/p&gt;
+
+&lt;p&gt;娃娃菜&lt;/p&gt;
+
+&lt;p&gt;海带&lt;/p&gt;
+
+&lt;p&gt;香菜&lt;/p&gt;
+
+&lt;p&gt;油麦菜&lt;/p&gt;
+
+&lt;p&gt;（不喜欢吃萝卜&lt;/p&gt;
+
+&lt;h2 id=&quot;菌类&quot;&gt;菌类&lt;/h2&gt;
+
+&lt;p&gt;香菇&lt;/p&gt;
+
+&lt;p&gt;金针菇&lt;/p&gt;
+
+&lt;h2 id=&quot;荤菜&quot;&gt;荤菜&lt;/h2&gt;
+
+&lt;p&gt;牛羊肉&lt;/p&gt;
+
+&lt;p&gt;各种丸子&lt;/p&gt;
+
+&lt;p&gt;毛肚&lt;/p&gt;
+
+&lt;h2 id=&quot;面食&quot;&gt;面食&lt;/h2&gt;
+
+&lt;p&gt;宽粉&lt;/p&gt;
+
+&lt;p&gt;细粉&lt;/p&gt;
+
+&lt;p&gt;土豆粉&lt;/p&gt;
+
+&lt;p&gt;苕粉&lt;/p&gt;</content><author><name>Clazy</name></author><category term="日常" /><summary type="html">小小的火锅食谱</summary></entry><entry><title type="html">σ未知 证明t统计量的分布</title><link href="http://localhost:4000/2020/02/12/t%E5%88%86%E5%B8%83.html" rel="alternate" type="text/html" title="σ未知 证明t统计量的分布" /><published>2020-02-12T00:00:00+08:00</published><updated>2020-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/12/t%E5%88%86%E5%B8%83</id><content type="html" xml:base="http://localhost:4000/2020/02/12/t%E5%88%86%E5%B8%83.html">&lt;p&gt;昨天看到计量里好多假设检验都在无休止地使用和改进 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 分布。以至于看到 $t$ 统计量最初的形式都心生困惑，为什么 &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; 未知时，构造的 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量是服从自由度为 &lt;script type=&quot;math/tex&quot;&gt;n-1&lt;/script&gt; 的 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 分布的。&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;查阅资料，按图索骥之后，记录如下：&lt;/p&gt;
+
+&lt;p&gt;总体 &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; 标准差未知，由 &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; 样本标准差 构建的 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量为 &lt;script type=&quot;math/tex&quot;&gt;t=\frac{\bar{x}-\mu} {s/ \sqrt{n}}&lt;/script&gt;， 证明 &lt;script type=&quot;math/tex&quot;&gt;\frac{\bar{x}-\mu}{s/ \sqrt{n}} \sim t(n-1)&lt;/script&gt; 。&lt;/p&gt;
+
+&lt;h2 id=&quot;1&quot;&gt;1&lt;/h2&gt;
+
+&lt;p&gt;已知 &lt;script type=&quot;math/tex&quot;&gt;\bar{x} \sim {N(\mu,\frac{\sigma^2}{n})}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;所以&lt;script type=&quot;math/tex&quot;&gt;{\frac{\bar{x}-\mu} {\sigma/n}} \sim N(0,1)&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2&quot;&gt;2&lt;/h2&gt;
+
+&lt;p&gt;证明 &lt;script type=&quot;math/tex&quot;&gt;{\frac{(n-1)s^2}{\sigma^2}}\sim {\chi^2(n-1)}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation}
+\begin{split}
+{\frac{(n-1)s^2}{\sigma^2}}=&amp;{\frac{\sum_1^n(x_i-\bar{x})^2}{\sigma^2}}\\
+=&amp;{\frac{\sum_1^nx_i^2-n\bar{x}^2}{\sigma^2}}\\
+=&amp;{\frac{\sum_1^n(x_i-\mu+\mu)^2-n(\bar{x}-\mu+\mu)^2}{\sigma^2}}\\
+=&amp;{\frac{\sum_1^n(x_i-\mu)^2+2\mu\sum_0^n(x_i-\mu)+n\mu^2}{\sigma^2}}-{\frac{n(\bar{x}-\mu)^2+n2\mu(\bar{x}-\mu)+n\mu^2}{\sigma^2}}\\
+=&amp;{\frac{\sum_1^n(x_i-\mu)^2+2\mu(n\bar{x}-n\mu)+n\mu^2}{\sigma^2}}-{\frac{n(\bar{x}-\mu)^2+n2\mu(\bar{x}-\mu)+n\mu^2}{\sigma^2}}\\
+=&amp;{\frac{\sum_1^n(x_i-\mu)^2}{\sigma^2}}-{\frac{(\bar{x}-\mu)^2}{\sigma^2/n}}
+\end{split}
+\end{equation} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;则 &lt;script type=&quot;math/tex&quot;&gt;{\left({\frac{\sum_1^n(x_i-\mu)^2}{\sigma^2}}-{\frac{(\bar{x}-\mu)^2} {\sigma^2/n}}\right)}\sim \chi^2(n-1)&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3&quot;&gt;3&lt;/h2&gt;
+
+&lt;p&gt;根据 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 分布的定义得：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation}
+\begin{split}
+t=&amp;{\frac{\frac{\bar{x}-\mu}{\sigma/n}}{\sqrt{(n-1)s^2\over{\sigma^2}/(n-1)}}}\\
+=&amp; \frac{\bar{x}-\mu}{s/ \sqrt{n}}
+\end{split}
+\end{equation} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;因而 &lt;script type=&quot;math/tex&quot;&gt;{\frac{\bar{x}-\mu}{s/ \sqrt{n}}}\sim{t(n-1)}&lt;/script&gt; 。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;现实中总体 &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt;  一般是未知的，在已知 &lt;script type=&quot;math/tex&quot;&gt;x\sim N(\mu,\sigma^2)&lt;/script&gt; 的情况下，可直接构造上述 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量进行 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 检验。&lt;/li&gt;
+  &lt;li&gt;在样本足够大的时候，在 &lt;script type=&quot;math/tex&quot;&gt;5\%&lt;/script&gt; 的显著性水平下， 直接用  &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量 与 &lt;script type=&quot;math/tex&quot;&gt;1.96&lt;/script&gt; 相比即可。在 &lt;script type=&quot;math/tex&quot;&gt;1\%&lt;/script&gt; 的显著性水平下， 直接用  &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量 与 &lt;script type=&quot;math/tex&quot;&gt;2.58&lt;/script&gt; 相比。&lt;/li&gt;
+  &lt;li&gt;样本标准误 &lt;script type=&quot;math/tex&quot;&gt;s.e.(standard\ error) = s/\sqrt n&lt;/script&gt; ，区别于样本标准差 &lt;script type=&quot;math/tex&quot;&gt;s.d.(standard\ deviation)=s&lt;/script&gt; 。&lt;/li&gt;
+  &lt;li&gt;用 R 语言进行移动平均自回归时，输出结果中不显示回归系数的 &lt;script type=&quot;math/tex&quot;&gt;p-value&lt;/script&gt; ， 但会同时给出系数估计值和 &lt;script type=&quot;math/tex&quot;&gt;s.e.(standard\ error)&lt;/script&gt; .由于我们一般假设检验的&lt;script type=&quot;math/tex&quot;&gt;H_0 : \varphi=0&lt;/script&gt; ，故 &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; 统计量中的 &lt;script type=&quot;math/tex&quot;&gt;\mu=0&lt;/script&gt; ，&lt;script type=&quot;math/tex&quot;&gt;t ={ \frac{\hat{\varphi}}{s.e.}}&lt;/script&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Clazy</name></author><category term="计量经济学" /><summary type="html">昨天看到计量里好多假设检验都在无休止地使用和改进 分布。以至于看到 $t$ 统计量最初的形式都心生困惑，为什么 未知时，构造的 统计量是服从自由度为 的 分布的。</summary></entry><entry><title type="html">凸优化</title><link href="http://localhost:4000/2020/02/12/%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2.html" rel="alternate" type="text/html" title="凸优化" /><published>2020-02-12T00:00:00+08:00</published><updated>2020-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/12/%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2</id><content type="html" xml:base="http://localhost:4000/2020/02/12/%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2.html">&lt;h2 id=&quot;1标准优化问题&quot;&gt;1.标准优化问题&lt;/h2&gt;
+
+&lt;p&gt;凸优化只是众多优化问题中的一种。&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;只不过在原始问题是凸优化问题时，优化时具有诸多优良性质。&lt;/p&gt;
+
+&lt;p&gt;在定义凸优化问题之前，先定义“标准优化问题”。
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+&amp;min\ f(x)\\
+&amp;s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m\\
+&amp;\quad \quad h_i=0\quad \quad \quad \ i=1,...,p\\
+\end{aligned} %]]&gt;&lt;/script&gt;
+其中，&lt;script type=&quot;math/tex&quot;&gt;x\in R^n&lt;/script&gt;为优化问题的优化变量。&lt;/p&gt;
+
+&lt;h2 id=&quot;2凸优化问题&quot;&gt;2.凸优化问题&lt;/h2&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;f(x),g(x)&lt;/script&gt;均为凸函数，&lt;script type=&quot;math/tex&quot;&gt;h(x)&lt;/script&gt;为仿射函数（即最高次数为1的多项式函数）的优化问题为凸优化问题。&lt;/p&gt;
+
+&lt;p&gt;凸优化问题有很多优良性质，例如，若&lt;script type=&quot;math/tex&quot;&gt;\exists\ (\tilde{x},\tilde{\lambda},\tilde{\mu})&lt;/script&gt;满足KKT条件 &lt;script type=&quot;math/tex&quot;&gt;\Leftrightarrow&lt;/script&gt; &lt;script type=&quot;math/tex&quot;&gt;(\tilde{x},\tilde{\lambda},\tilde{\mu})&lt;/script&gt;均为最优解，且满足强对偶性。（其中，&lt;script type=&quot;math/tex&quot;&gt;\tilde{x}&lt;/script&gt;为原始问题的一个可行解，&lt;script type=&quot;math/tex&quot;&gt;(\tilde{\lambda}, \tilde{\mu})&lt;/script&gt;为对偶问题的一组可行解）&lt;/p&gt;
+
+&lt;p&gt;但如果原始问题不是凸优化问题，则强对偶性成立时，原始问题和对偶问题的最优解&lt;script type=&quot;math/tex&quot;&gt;(x^*,\lambda^*,\mu^*)&lt;/script&gt;一定满足KKT条件，但反之，满足KKT条件的解不一定是具有强对偶性的最优解。&lt;/p&gt;
+
+&lt;p&gt;注：“最优准则定理”：若&lt;script type=&quot;math/tex&quot;&gt;\tilde{x}&lt;/script&gt;为原始问题的一个可行解，&lt;script type=&quot;math/tex&quot;&gt;(\tilde{\lambda}, \tilde{\mu} )&lt;/script&gt;为对偶问题的一组可行解，且满足强对偶性，那么这两个解均是对应问题的最优解（不要求原始问题为凸优化问题）。即，&lt;strong&gt;满足强对偶性的可行解一定是对应问题的最优解。&lt;/strong&gt;换句话说，最优解不一定具有强对偶性，但满足强对偶性一定是最优解。&lt;/p&gt;
+
+&lt;h2 id=&quot;3原始问题&quot;&gt;3.原始问题&lt;/h2&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+&amp;\mathop{min}_{x \in R^n}\ f(x)\\
+&amp;s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m \quad (inequality\ constraints)\\
+&amp;\quad \quad h_i=0\quad \quad \quad \ i=1,...,p \quad (equality\ constraints)\\
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;引入拉格朗日函数（Lagrange function）：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(x,\lambda,v)=f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x)&lt;/script&gt;
+
+&lt;p&gt;其定义域为&lt;script type=&quot;math/tex&quot;&gt;D×R^m\times R^p&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\lambda_i&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;\mu_i&lt;/script&gt;均为拉格朗日乘子，且要求必须有&lt;script type=&quot;math/tex&quot;&gt;\mu_i\geqslant&lt;/script&gt;0。&lt;/p&gt;
+
+&lt;p&gt;再定义一个函数：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+\theta_p(x) &amp;= \displaystyle \max_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)\\
+&amp;=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}(f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x))
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;即，&lt;script type=&quot;math/tex&quot;&gt;\theta_p(x)&lt;/script&gt;表示原始问题拉格朗日函数的最大值。&lt;/p&gt;
+
+&lt;p&gt;可证：原始问题的最优值等于最小化&lt;script type=&quot;math/tex&quot;&gt;\theta _p(x)&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;简要证明：&lt;/p&gt;
+
+&lt;p&gt;在&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;满足约束条件的情况下，即&lt;script type=&quot;math/tex&quot;&gt;g_i(x)\leqslant 0&lt;/script&gt;且&lt;script type=&quot;math/tex&quot;&gt;h_i(x)=0&lt;/script&gt;，那么要最大化&lt;script type=&quot;math/tex&quot;&gt;L(x,\lambda,\mu)&lt;/script&gt;，应取&lt;script type=&quot;math/tex&quot;&gt;\mu_i=0&lt;/script&gt;，且无论&lt;script type=&quot;math/tex&quot;&gt;\lambda _i&lt;/script&gt;取何值，第三项均为0，因而，&lt;script type=&quot;math/tex&quot;&gt;\theta_ p(x)=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}(f(x))&lt;/script&gt;，也即&lt;script type=&quot;math/tex&quot;&gt;\theta_ p(x)=f(x)&lt;/script&gt;，因为这里参数是&lt;script type=&quot;math/tex&quot;&gt;(\lambda,\mu)&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;是给定的外生变量。&lt;/p&gt;
+
+&lt;p&gt;那么，若用&lt;script type=&quot;math/tex&quot;&gt;p^*&lt;/script&gt;表示原始问题的最优值：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p^*=\mathop{min}_{x \in R^n}f(x)=\mathop{min}_{x \in R^n}\theta _p(x)=\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)&lt;/script&gt;
+
+&lt;p&gt;至此，我们将原始优化问题转化为:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+&amp;\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)\\
+&amp;s.t.\ g_i(x)\leqslant0 \quad \quad i=1,...,m\\
+&amp;\quad\quad h_i=0\quad \quad \quad \ i=1,...,p\\
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;4对偶问题&quot;&gt;4.对偶问题&lt;/h2&gt;
+
+&lt;p&gt;类比原始问题中定义的&lt;script type=&quot;math/tex&quot;&gt;\theta_p(x) = \mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)&lt;/script&gt;，对偶问题中我们定义&lt;script type=&quot;math/tex&quot;&gt;\theta_d(x) = \mathop{min}_{x \in R^n}L(x,\lambda,\mu)&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;则对偶问题定义为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+&amp;\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)\\
+&amp;s.t.\quad\mu_i \geqslant0
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;一般用&lt;script type=&quot;math/tex&quot;&gt;d^*&lt;/script&gt;表示对偶问题的最优值：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p^*=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\theta _d(x)=\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)&lt;/script&gt;
+
+&lt;p&gt;对偶问题的性质（普遍存在的弱对偶性）：对偶问题的最优值&lt;script type=&quot;math/tex&quot;&gt;d^*&lt;/script&gt; &lt;script type=&quot;math/tex&quot;&gt;\leqslant&lt;/script&gt;原始问题的最优值&lt;script type=&quot;math/tex&quot;&gt;p^*&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;即：&lt;script type=&quot;math/tex&quot;&gt;\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}\mathop{min}_{x \in R^n}L(x,\lambda,\mu)\leqslant\mathop{min}_{x \in R^n}\mathop{max}_{\lambda,\mu,\mu_i\geqslant0}L(x,\lambda,\mu)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Duality gap: &lt;script type=&quot;math/tex&quot;&gt;p^*-d^*&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;根据以上对偶概念，定义拉格朗日对偶函数：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;g(\lambda,\mu)=\mathop{inf}_{x\in D}L(x,\lambda,\mu)=\mathop{inf}_{x\in D}(f(x)+\sum_{i=1}^m\mu_ig_i(x)+\sum_{i=1}^p\lambda_ih_i(x))&lt;/script&gt;
+
+&lt;p&gt;其中$inf$表示下确界（infimum），即拉格朗日对偶函数就是拉格朗日函数的下确界。&lt;/p&gt;
+
+&lt;p&gt;注：如果非空数集A有上界，则它的最小上界称为上确界，记为&lt;script type=&quot;math/tex&quot;&gt;supA&lt;/script&gt;；同理，如果非空数集A有下界，则它的最大下界称为下确界，记为&lt;script type=&quot;math/tex&quot;&gt;infA&lt;/script&gt;。例如，集合&lt;script type=&quot;math/tex&quot;&gt;A=(0,1)&lt;/script&gt;，则其上确界为1,下确界为0。&lt;/p&gt;
+
+&lt;p&gt;性质：如果拉格朗日函数关于&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;无下界，则对偶函数取值为&lt;script type=&quot;math/tex&quot;&gt;-\infty&lt;/script&gt;。因为对偶函数是一族关于&lt;script type=&quot;math/tex&quot;&gt;(\lambda,\mu)&lt;/script&gt;的仿射函数的逐点下确界，所以即使原问题不是凸的，对偶函数也是&lt;strong&gt;凹函数&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;5slater定理和强对偶性&quot;&gt;5.Slater定理和强对偶性&lt;/h2&gt;
+
+&lt;p&gt;通常Slater定理被叙述为“若凸优化问题存在严格可行解，则优化问题具有强对偶性。”&lt;/p&gt;
+
+&lt;p&gt;“严格可行解”：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+\exists x \in D \quad &amp;g_i(x)&lt;0 \quad i=1,...,m\\
+&amp;Ax=b
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;“强对偶性”：若&lt;script type=&quot;math/tex&quot;&gt;p^*=d^*&lt;/script&gt;，则称原始问题和对偶问题之间具有强对偶性。&lt;/p&gt;
+
+&lt;p&gt;则，（不一定必须是凸优化问题）满足强对偶性的最优解一定满足KKT条件。（necessary condition）&lt;/p&gt;
+
+&lt;h2 id=&quot;6逻辑梳理总结&quot;&gt;6.逻辑梳理（总结）&lt;/h2&gt;
+
+&lt;p&gt;在标准优化问题下，若&lt;script type=&quot;math/tex&quot;&gt;(\tilde{x},\tilde{\lambda},\tilde{\mu})&lt;/script&gt;一组解，满足强对偶性，那它们一定是对应的原始问题和对偶问题的最优解，且这组解满足KKT条件。此时，已知满足KKT条件的解，不可反推，即满足KKT条件的解不一定是最优解（因为满足KKT条件的可能有多组解），即使是最优解（一定满足弱对偶性）也不一定满足强对偶性。&lt;/p&gt;
+
+&lt;p&gt;在凸优化问题下，若&lt;script type=&quot;math/tex&quot;&gt;(\tilde{x},\tilde{\lambda},\tilde{\mu})&lt;/script&gt;满足Slater定理，即是一组严格可行解，那么它们满足强对偶性，也就进而满足KKT条件。此时，若已知满足KKT条件的解，可以反推。&lt;/p&gt;</content><author><name>Clazy</name></author><category term="机器学习" /><summary type="html">1.标准优化问题</summary></entry><entry><title type="html">简单Logistic回归解决二分类问题</title><link href="http://localhost:4000/2020/02/12/%E7%AE%80%E5%8D%95Logistic%E5%9B%9E%E5%BD%92%E8%A7%A3%E5%86%B3%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98.html" rel="alternate" type="text/html" title="简单Logistic回归解决二分类问题" /><published>2020-02-12T00:00:00+08:00</published><updated>2020-02-12T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/12/%E7%AE%80%E5%8D%95Logistic%E5%9B%9E%E5%BD%92%E8%A7%A3%E5%86%B3%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98</id><content type="html" xml:base="http://localhost:4000/2020/02/12/%E7%AE%80%E5%8D%95Logistic%E5%9B%9E%E5%BD%92%E8%A7%A3%E5%86%B3%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98.html">&lt;p&gt;“喂”给Sigmoid函数的&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;的表达式不同，超平面的形状也就不同（&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;的表达式就是超平面的表达式）。所以，实际上Logistic回归可以拟合“非线性”的超平面（&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;的表达式为非线性函数）来解决二分类问题。&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;这里，以“线性”超平面为例，来介绍简单Logistic回归如何解决二分类问题。&lt;/p&gt;
+
+&lt;p&gt;Logistic回归解决二分类问题，针对两种数据结构实际上有两种截然不同的优化思路。习惯上，我们把这两种数据结构划分为“分组数据”和“未分组数据”。在机器学习中，一般遇到的数据集都是所谓的“未分组数据”；而在统计分析中，很多教材也十分强调“分组数据”。下文中会分别介绍和解释两种不同的优化思路，但是只强调在实际中应用比较多的“未分组数据”。&lt;/p&gt;
+
+&lt;h2 id=&quot;分组数据&quot;&gt;分组数据&lt;/h2&gt;
+
+&lt;p&gt;购买房屋的顾客记为1,没有购买的记为0,并按照年收入和受教育年限对顾客进行分组，形成下面的表格。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;年收入（万元）&lt;script type=&quot;math/tex&quot;&gt;x_1&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;受教育年限（年）&lt;script type=&quot;math/tex&quot;&gt;x_2&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;签订意向书人数&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;实际购房人数&lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;实际购房比例&lt;script type=&quot;math/tex&quot;&gt;p=\frac{m} {n}&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;逻辑变换&lt;script type=&quot;math/tex&quot;&gt;p'=ln(\frac{p} {1-p})&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;权重&lt;script type=&quot;math/tex&quot;&gt;w=np(1-p)&lt;/script&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;25&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.32&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-0.75&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5.44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;32&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.41&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-0.38&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7.72&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;58&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;26&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.45&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-0.21&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;14.35&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;对于这种分组数据，首先计算“1”所占的比重，即&lt;script type=&quot;math/tex&quot;&gt;p=\frac{m} {n}=\frac{e^{y}} {1+e^{y}}=\frac{e^{\beta_0+\beta_1 x_1\beta_2 x_2}} {1+e^{\beta_0+\beta_1 x_1+\beta_2 x_2}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;这里&lt;script type=&quot;math/tex&quot;&gt;y=\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon&lt;/script&gt;为一个线性函数，也就是一个线性超平面。&lt;/p&gt;
+
+&lt;p&gt;再对&lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;进行“逻辑变换”：&lt;script type=&quot;math/tex&quot;&gt;p'=ln(\frac{p} {1-p})=\beta_0+\beta_1 x_1+\beta_2 x_2=y&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;这样已知&lt;script type=&quot;math/tex&quot;&gt;y,x_1,x_2&lt;/script&gt;可以对上式进行WLS（加权最小二乘）回归，拟合出最优参数&lt;script type=&quot;math/tex&quot;&gt;\beta_0,\beta_1,\beta_2&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;之所以进行WLS回归而不进行OLS（普通最小二乘）回归，是因为二值变量做因变量回归的残差具有异方差性，当$n$足够大时，&lt;script type=&quot;math/tex&quot;&gt;\sigma(\varepsilon)\approx\frac{1} {np(1-p)}&lt;/script&gt;。所以要消除异方差，有&lt;script type=&quot;math/tex&quot;&gt;y'=wy=w(\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon)&lt;/script&gt;，再进行OLS估计。&lt;/p&gt;
+
+&lt;p&gt;进行OLS估计的优化函数为损失函数&lt;script type=&quot;math/tex&quot;&gt;MSE=\frac{\Sigma_{i=1}^N(y'-\hat{y'})^2} {N}&lt;/script&gt;，机器学习中可用梯度下降法来优化参数。&lt;/p&gt;
+
+&lt;p&gt;得到最优参数之后可以计算出&lt;script type=&quot;math/tex&quot;&gt;\hat{y'}&lt;/script&gt;进而计算出&lt;script type=&quot;math/tex&quot;&gt;\hat{p}=\frac{e^\hat{y}} {1+e^\hat{y}}&lt;/script&gt;来预测在自变量&lt;script type=&quot;math/tex&quot;&gt;x_1,x_2&lt;/script&gt;的条件下，&lt;script type=&quot;math/tex&quot;&gt;y=1&lt;/script&gt;所占的比重（实际购房比例），或者解释为，在自变量&lt;script type=&quot;math/tex&quot;&gt;x_1,x_2&lt;/script&gt;的条件下，&lt;script type=&quot;math/tex&quot;&gt;y=1&lt;/script&gt;的平均值。&lt;/p&gt;
+
+&lt;h2 id=&quot;未分组数据重要&quot;&gt;未分组数据（重要）&lt;/h2&gt;
+
+&lt;p&gt;购买房屋的顾客记为1,没有购买的记为0。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;性别&lt;script type=&quot;math/tex&quot;&gt;x_1&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;年龄（岁）&lt;script type=&quot;math/tex&quot;&gt;x_2&lt;/script&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;y&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;18&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;21&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;23&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;这里&lt;script type=&quot;math/tex&quot;&gt;y=\beta_0+\beta_1 x_1+\beta_2 x_2+\varepsilon&lt;/script&gt;仍取为一个线性函数。&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;p=\frac{e^{y}} {1+e^{y}}&lt;/script&gt;为&lt;script type=&quot;math/tex&quot;&gt;y=1&lt;/script&gt;的概率，则&lt;script type=&quot;math/tex&quot;&gt;y=0&lt;/script&gt;的概率为&lt;script type=&quot;math/tex&quot;&gt;1-p&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;那么，一个样本的&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;的概率函数合写为：&lt;script type=&quot;math/tex&quot;&gt;P=p^y(1-p)^{1-y} \quad y=0,1&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;为了避免处理异方差，我们通常用极大似然估计来优化参数。&lt;/p&gt;
+
+&lt;p&gt;极大似然函数为：&lt;script type=&quot;math/tex&quot;&gt;L=\prod_{i=1}^NP_i=p_i^{y_i}(1-p_i)^{1-y_i}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;对似然函数取对数，得&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+lnL&amp;=\Sigma_{i=1}^N[y_ilnp_i+(1-y_i)ln(1-p_i))]\\
+&amp;=\Sigma_{i=1}^N[y_iln\frac{p_i} {1-p_i}+ln(1-p_i)]
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;因为&lt;script type=&quot;math/tex&quot;&gt;p_i=\frac{e^{y_i}}{1+e^{y_i}}&lt;/script&gt;，代入上式可得：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+lnL&amp;=\Sigma_{i=1}^N[y_iln\frac{p_i} {1-p_i}+ln(1-p_i)]\\
+&amp;=\Sigma_{i=1}^N[y_i\times y_i+ln(1+e^{y_i})]\\
+&amp;=\Sigma_{i=1}^N[y_i\times (\beta_0+\beta_1 x_{1i}+\beta_2 x_{2i}+\varepsilon)+ln(1+e^{\beta_0+\beta_1 x_{1i}+\beta_2 x_{2i}+\varepsilon})]
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;综上的对数似然函数就是我们的优化目标函数，这里要最大化对数似然函数，因而用梯度上升算法进行优化。&lt;/p&gt;
+
+&lt;p&gt;机器学习中，对数似然函数梯度的计算：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\left(
+\begin{aligned}
+\frac{\partial lnL} {\partial \beta_0}&amp;=\Sigma_{i=1}^N(y_i\times1-\frac{e^{y_i}\times 1} {1+e^{y_i}})=\Sigma_{i=1}^N[1 \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\frac{\partial lnL} {\partial \beta_1}&amp;=\Sigma_{i=1}^N(y_i\times x_{1i}-\frac{e^{y_i}\times x_{1i}} {1+e^{y_i}})=\Sigma_{i=1}^N[x_{1i} \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\frac{\partial lnL} {\partial \beta_2}&amp;=\Sigma_{i=1}^N(y_i\times x_{2i}-\frac{e^{y_i} \times x_{2i}} {1+e^{y_i}})=\Sigma_{i=1}^N[x_{2i} \times (y_i-\frac{e^{y_i}} {1+e^{y_i}})]\\
+\end{aligned}
+\right) %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;根据上式推导，&lt;script type=&quot;math/tex&quot;&gt;\beta_k^{(n)}=\beta_k^{(n-1)}+ \alpha \nabla_{\beta_k}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;实例及代码实现&quot;&gt;实例及代码实现&lt;/h2&gt;
+
+&lt;p&gt;针对未分组数据，下面给出实例和Python代码(略)&lt;/p&gt;</content><author><name>Clazy</name></author><category term="机器学习" /><summary type="html">“喂”给Sigmoid函数的的表达式不同，超平面的形状也就不同（的表达式就是超平面的表达式）。所以，实际上Logistic回归可以拟合“非线性”的超平面（的表达式为非线性函数）来解决二分类问题。</summary></entry></feed>
