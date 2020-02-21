@@ -81,7 +81,7 @@ social-share-items: ['qq', 'wechat', 'weibo', 'twitter', 'facebook']
 
 # 百度统计 在baidu-url里填写自己相关的url代码
 baidu: true
-baidu-url: ''
+baidu-url: 'd81637c8fa58ba079c63a3aa3ad8e60d'
 # 谷歌分析 在google-ID里填写自己在谷歌分析获得的追踪ID
 google: false
 google-ID: ''
