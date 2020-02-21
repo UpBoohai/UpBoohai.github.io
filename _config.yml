@@ -2,7 +2,7 @@
 title: 'Clazy's Blog | Humming'
 description: 'Cozy connor of Clazy'
 keywords: 'Daily Life, Inspiration'
-url: 'https://abc.github.io' # your host
+url: 'https://clazy.top' # your host
 
 # nav 中文字符空格：&emsp;
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
@@ -67,7 +67,7 @@ disqus: false
 disqus_url: '' # https://abc.disqus.com/embed.js
 # 来必力评论
 livere: true
-livere_uid: 'MTAyMC8zNDI2OS8xMDgwNg==' # MTAyMC8zNDI2OS8xMDgwNg==
+livere_uid: 'MTAyMC80ODcyNi8yNTIyMA==' # MTAyMC8zNDI2OS8xMDgwNg==
 # Gitment评论 OAuth Application
 Gitment: false
 Gitment_owner: ''  # github用户名
