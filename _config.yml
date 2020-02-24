@@ -1,7 +1,8 @@
 # Site settings 配置站点
+SEOTitle: Clazy's bolg
 title: 'Humming'
-description: 'Cozy connor of Clazy'
-keywords: 'Daily Life, Inspiration'
+description: 'A personal technological and mathematical blog'
+keywords: 'Machine Learning,Deep Learning,Mathematics,Daily Life'
 url: 'https://clazy.top' # your host
 
 # nav 中文字符空格：&emsp;
